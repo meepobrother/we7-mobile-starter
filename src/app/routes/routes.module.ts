@@ -4,10 +4,12 @@ import { routes, components } from './routes';
 import { SharedModule } from '@shared/shared.module';
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes),
+        RouterModule.forRoot(routes, { useHash: false }),
         SharedModule
     ],
-    exports: [],
+    exports: [
+        RouterModule
+    ],
     declarations: [
         components
     ],
