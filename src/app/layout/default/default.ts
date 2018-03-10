@@ -10,4 +10,6 @@ export class DefaultComponent implements OnInit {
     ) { }
 
     ngOnInit() { }
+
+    onLoadMore(e: any) { }
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SidebarService } from '@core/sidebar.service';
-
+import { PopupComponent } from "ngx-weui/popup";
 @Component({
     selector: 'app-header',
     templateUrl: 'header.html',
@@ -8,7 +8,7 @@ import { SidebarService } from '@core/sidebar.service';
 })
 
 export class HeaderComponent implements OnInit {
-
+    @ViewChild('simple') simplePopup: PopupComponent;
     loading: boolean = true;
     constructor(
         public sidebar: SidebarService

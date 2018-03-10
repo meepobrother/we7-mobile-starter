@@ -3,7 +3,7 @@ import { SharedModule } from '@shared/shared.module';
 import { DefaultComponent } from './default/default';
 import { FooterComponent } from './default/footer/footer';
 import { HeaderComponent } from './default/header/header';
-
+import { GlobalFooter } from './default/global-footer/global-footer';
 @NgModule({
     imports: [
         SharedModule
@@ -14,7 +14,8 @@ import { HeaderComponent } from './default/header/header';
     declarations: [
         DefaultComponent,
         FooterComponent,
-        HeaderComponent
+        HeaderComponent,
+        GlobalFooter
     ],
     providers: [],
 })

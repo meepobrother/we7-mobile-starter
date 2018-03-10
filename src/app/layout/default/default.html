@@ -1,11 +1,27 @@
 <weui-sidebar-container>
     <weui-sidebar [(status)]="sidebar.isOpen" position="left">
-        侧边栏
+        <div class="weui-cells" style="margin-top: 0px;">
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>cell standard</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+        </div>
     </weui-sidebar>
     <page>
         <app-header></app-header>
         <weui-infiniteloader (loadmore)="onLoadMore($event)">
             <router-outlet></router-outlet>
+            <global-footer></global-footer>
         </weui-infiniteloader>
         <app-footer></app-footer>
     </page>

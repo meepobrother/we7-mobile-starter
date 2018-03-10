@@ -5,9 +5,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { WeuiModule } from '../weui.module';
 
 import { Page } from './page/page';
-
+import { AdAvatarListModule } from '@delon/abc';
+import { NzToolTipModule, NzTabsModule } from 'ng-zorro-antd';
 export const components = [
-    Page
+    Page,
 ];
 @NgModule({
     imports: [
@@ -15,7 +16,10 @@ export const components = [
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
-        WeuiModule
+        WeuiModule,
+        AdAvatarListModule,
+        NzToolTipModule,
+        NzTabsModule
     ],
     exports: [
         RouterModule,
@@ -23,6 +27,9 @@ export const components = [
         ReactiveFormsModule,
         FormsModule,
         WeuiModule,
+        AdAvatarListModule,
+        NzToolTipModule,
+        NzTabsModule,
         ...components
     ],
     declarations: [
