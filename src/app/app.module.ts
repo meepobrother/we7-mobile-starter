@@ -4,7 +4,9 @@ import { UrlSerializer } from '@angular/router';
 import { MobileUrlSerializer } from 'we7-router';
 import { AppComponent } from './app.component';
 import { RoutesModule } from './routes/routes.module';
-import { WeuiModule } from './weui.module';
+import { LayoutModule } from './layout/layout.module';
+import { SharedModule } from '@shared/shared.module';
+import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +14,9 @@ import { WeuiModule } from './weui.module';
   imports: [
     BrowserModule,
     RoutesModule,
-    WeuiModule.forRoot()
+    LayoutModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [
     {

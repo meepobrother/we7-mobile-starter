@@ -1,0 +1,16 @@
+.drop-down {
+    position: absolute;
+    top: 34px;
+    right: 5px;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px 5px;
+        background: #fff;
+        li {
+            &:hover {
+                background: #efefef;
+            }
+        }
+    }
+}

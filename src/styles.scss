@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~meepo-themes/global";
+$ionicons-font-path: "./assets/fonts";
+@import "~meepo-themes";
+html,
+body,
+app-root,
+layout-default {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.page,
+body {
+    background-color: #f8f8f8;
+}
+
+.container,
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.page {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1;
+}
+
+app-header {
+    top: 0px;
+    .header-title {
+        flex: 1;
+        text-align: center;
+    }
+    i {
+        font-size: 20px;
+    }
+    .header-left,
+    .header-right {
+        min-width: 30px;
+        text-align: center;
+    }
+    .app-header-conatiner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+    }
+}
+
+app-footer {
+    bottom: 0px;
+    .footer-item {
+        flex: 1;
+        text-align: center;
+    }
+    .app-footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+    }
+}
+
+.weui-infiniteloader__content {
+    margin-top: 44px;
+    margin-bottom: 44px;
+}
+
+app-header,
+app-footer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 44px;
+    background: #fff;
+}

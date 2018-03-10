@@ -1,0 +1,12 @@
+<weui-sidebar-container>
+    <weui-sidebar [(status)]="sidebar.isOpen" position="left">
+        侧边栏
+    </weui-sidebar>
+    <page>
+        <app-header></app-header>
+        <weui-infiniteloader (loadmore)="onLoadMore($event)">
+            <router-outlet></router-outlet>
+        </weui-infiniteloader>
+        <app-footer></app-footer>
+    </page>
+</weui-sidebar-container>
