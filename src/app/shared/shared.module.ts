@@ -5,8 +5,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { WeuiModule } from '../weui.module';
 
 import { Page } from './page/page';
-import { AdAvatarListModule } from '@delon/abc';
-import { NzToolTipModule, NzTabsModule } from 'ng-zorro-antd';
+import { AdAvatarListModule, AdDescListModule, AdProHeaderModule, AdResultModule, AdNoticeIconModule } from '@delon/abc';
+import {
+    NzToolTipModule, NzTabsModule, NzBreadCrumbModule,
+    NzButtonModule, NzDropDownModule, NzGridModule, NzCardModule,
+    NzStepsModule
+} from 'ng-zorro-antd';
+import { NzIconModule } from 'ng-zorro-antd-extra';
 export const components = [
     Page,
 ];
@@ -19,7 +24,18 @@ export const components = [
         WeuiModule,
         AdAvatarListModule,
         NzToolTipModule,
-        NzTabsModule
+        NzTabsModule,
+        NzBreadCrumbModule,
+        NzButtonModule,
+        NzDropDownModule,
+        AdDescListModule,
+        AdProHeaderModule.forRoot(),
+        NzGridModule,
+        NzCardModule,
+        AdResultModule,
+        NzStepsModule,
+        AdNoticeIconModule,
+        NzIconModule
     ],
     exports: [
         RouterModule,
@@ -30,6 +46,17 @@ export const components = [
         AdAvatarListModule,
         NzToolTipModule,
         NzTabsModule,
+        NzButtonModule,
+        NzBreadCrumbModule,
+        NzDropDownModule,
+        AdDescListModule,
+        AdProHeaderModule,
+        NzGridModule,
+        NzCardModule,
+        AdResultModule,
+        NzStepsModule,
+        AdNoticeIconModule,
+        NzIconModule,
         ...components
     ],
     declarations: [

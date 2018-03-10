@@ -6,6 +6,10 @@ import { CheckLoginGuard } from '@core/guards/login.guard';
 import { LoginPage } from './login-page/login-page';
 import { RegisterPage } from './register-page/register-page';
 import { ForgetPage } from './forget-page/forget-page';
+import { DetailPage } from './detail-page/detail-page';
+import { TaskResult } from './task-result/task-result';
+
+
 
 export const routes: Routes = [{
     path: '',
@@ -27,6 +31,12 @@ export const routes: Routes = [{
 }, {
     path: 'forget',
     component: ForgetPage
+}, {
+    path: 'detail',
+    component: DetailPage
+},{
+    path: 'taskresult',
+    component: TaskResult
 }];
 
 export const components = [
@@ -34,5 +44,7 @@ export const components = [
     IndexPage,
     LoginPage,
     RegisterPage,
-    ForgetPage
+    ForgetPage,
+    DetailPage,
+    TaskResult
 ];
