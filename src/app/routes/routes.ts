@@ -9,6 +9,9 @@ import { ForgetPage } from './forget-page/forget-page';
 import { DetailPage } from './detail-page/detail-page';
 import { TaskResult } from './task-result/task-result';
 
+import { CarAddPage } from './car-add/car-add';
+import { CarNumPage } from './car-num/car-num';
+import { CarPage } from './car-page/car-page';
 
 
 export const routes: Routes = [{
@@ -17,8 +20,7 @@ export const routes: Routes = [{
     redirectTo: 'index'
 }, {
     path: 'home',
-    component: HomePage,
-    canActivate: [CheckLoginGuard]
+    component: HomePage
 }, {
     path: 'index',
     component: IndexPage
@@ -33,10 +35,24 @@ export const routes: Routes = [{
     component: ForgetPage
 }, {
     path: 'detail',
-    component: DetailPage
-},{
+    component: DetailPage,
+    canActivate: [CheckLoginGuard]
+}, {
     path: 'taskresult',
-    component: TaskResult
+    component: TaskResult,
+    canActivate: [CheckLoginGuard]
+}, {
+    path: 'car',
+    component: CarPage,
+    canActivate: [CheckLoginGuard]
+}, {
+    path: 'caradd',
+    component: CarAddPage,
+    canActivate: [CheckLoginGuard]
+}, {
+    path: 'carnum',
+    component: CarNumPage,
+    canActivate: [CheckLoginGuard]
 }];
 
 export const components = [
@@ -46,5 +62,8 @@ export const components = [
     RegisterPage,
     ForgetPage,
     DetailPage,
-    TaskResult
+    TaskResult,
+    CarAddPage,
+    CarNumPage,
+    CarPage
 ];

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { UrlSerializer } from '@angular/router';
 import { MobileUrlSerializer } from 'we7-router';
 import { AppComponent } from './app.component';
@@ -22,10 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   providers: [
     {
-        provide: UrlSerializer,
-        useClass: MobileUrlSerializer
+      provide: UrlSerializer,
+      useClass: MobileUrlSerializer
     }
-],
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

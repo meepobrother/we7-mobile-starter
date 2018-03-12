@@ -3,6 +3,8 @@ import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angul
 import { HttpClient } from '@angular/common/http';
 import { We7Service } from '../we7.service';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/switchMap';
+import { of } from 'rxjs/observable/of';
 @Injectable()
 export class CheckLoginGuard implements CanActivate {
     constructor(
@@ -14,6 +16,9 @@ export class CheckLoginGuard implements CanActivate {
         if (isDevMode()) {
             return true;
         }
-        return this.http.get<boolean>(this.we7.getMobileUrl('checklogin'));
+        return this.http.get<any>(this.we7.getMobileUrl('checklogin'))
+            .switchMap((res: any) => {
+                return of(res.status === 1)
+            });
     }
 }

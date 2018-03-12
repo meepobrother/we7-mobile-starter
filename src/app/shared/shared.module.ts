@@ -12,8 +12,13 @@ import {
     NzStepsModule
 } from 'ng-zorro-antd';
 import { NzIconModule } from 'ng-zorro-antd-extra';
+
+import { EmptyComponent } from './empty/empty';
+import { NgxQRCodeComponent } from './qrcode/qrcode';
 export const components = [
     Page,
+    EmptyComponent,
+    NgxQRCodeComponent
 ];
 @NgModule({
     imports: [

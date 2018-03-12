@@ -5,3 +5,13 @@
     <avatar-list-item tips="Cipchk" text="Cipchk"></avatar-list-item>
     <avatar-list-item tips="heart-o" icon="heart-o"></avatar-list-item>
 </avatar-list>
+
+
+<weui-swiper [options]="options">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let i of [1, 2, 3, 4]">Slide {{i}}</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</weui-swiper>

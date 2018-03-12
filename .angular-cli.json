@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "../shibida_mfans/template/mobile/",
       "assets": [
         "assets",
         "favicon.ico"
@@ -22,7 +22,9 @@
         "styles.scss",
         "styles.less"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/swiper/dist/js/swiper.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
